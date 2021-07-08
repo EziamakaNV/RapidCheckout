@@ -1,10 +1,12 @@
-import dotenv from 'dotenv';
+const dotenv = require('dotenv');
 
 dotenv.config();
 
 const { DB_HOST, DB_USERNAME, DB_PASSWORD } = process.env;
 
-export default {
+console.log(DB_HOST);
+
+module.exports = {
   "development": {
     "username": DB_USERNAME,
     "password": DB_PASSWORD,
